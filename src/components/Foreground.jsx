@@ -7,29 +7,37 @@ function Foreground() {
 
     const data = [
         {
-            cardText: 'Lorem ipsum dolor sit amet consectetur.',
-            fileSize: '0.9md',
+            cardText: 'Excel Dashboard Files.',
+            fileSize: '650kb',
             optionIcon: true,
             footer: {
                 footerText: 'Download Now', isActive: true, bgColor: 'bg-green-600'
             }
         },
         {
-            cardText: 'Lorem ipsum dolor sit amet consectetur.',
+            cardText: 'Word Dashboard Files.',
             fileSize: '0.9md',
-            optionIcon: false,
+            optionIcon: true,
             footer: {
                 footerText: 'Upload', isActive: true, bgColor: 'bg-blue-600'
             }
         },
+        // {
+        //     cardText: 'JavaScript Files.',
+        //     fileSize: '5md',
+        //     optionIcon: false,
+        //     footer: {
+        //         footerText: 'Download Now', isActive: true, bgColor: 'bg-yellow-500'
+        //     }
+        // },
         {
-            cardText: 'Lorem ipsum dolor sit amet consectetur.',
-            fileSize: '0.9md',
-            optionIcon: false,
+            cardText: 'Text Files.',
+            fileSize: '266kb',
+            optionIcon: true,
             footer: {
-                footerText: 'Download Now', isActive: false, bgColor: 'bg-green-600'
+                footerText: 'Upload', isActive: false, bgColor: 'bg-blue-600'
             }
-        },
+        },        
     ]
 
 
