@@ -1,13 +1,14 @@
 import React, { useRef, useState } from "react";
 import Card from "./Card";
 
+
 function Foreground() {
     const ref = useRef(null);
     const [model, setModel] = useState(false);
     const [cardTextInput, setCardTextInput] = useState("");
     const [fileSizeInput, setfileSizeInput] = useState("");
     const [optionIconIsActive, setoptionIconIsActive] = useState(true);
-    const [footerText, setfooterText] = useState("Download Now");
+    const [footerText, setfooterText] = useState("");
     const [footerIsActive, setfooterIsActive] = useState(true);
     const [footerBgColor, setfooterBgColor] = useState("bg-green-600");
 
@@ -42,10 +43,10 @@ function Foreground() {
 
         setModel(false);
         setCardTextInput("");
+        setfooterText("");
         setfileSizeInput("");
     };
 
-    console.log(data);
 
 
     if (model) {
@@ -86,9 +87,7 @@ function Foreground() {
                                 value={optionIconIsActive}
                                 onChange={(e) => setoptionIconIsActive(e.target.value)}
                             >
-                                <option value={true} disabled={true} selected={true}>
-                                    Select Download Options
-                                </option>
+
                                 <option value={true}>Download Enable</option>
                                 <option value={false}>Download Disable</option>
                             </select>
@@ -98,9 +97,6 @@ function Foreground() {
                                 value={footerIsActive}
                                 onChange={(e) => setfooterIsActive(e.target.value)}
                             >
-                                <option value="true" disabled={true} selected={true}>
-                                    Select Footer Options
-                                </option>
                                 <option value={true}>Footer Enable</option>
                                 <option value={false}>Footer Disable</option>
                             </select>
@@ -118,9 +114,7 @@ function Foreground() {
                                 value={footerBgColor}
                                 onChange={(e) => setfooterBgColor(e.target.value)}
                             >
-                                <option disabled={true} selected={true}>
-                                    Select Footer Color Options
-                                </option>
+
                                 <option value="bg-blue-600">Blud</option>
                                 <option value="bg-green-600">Green</option>
                                 <option value="bg-violet-600">Violet</option>
