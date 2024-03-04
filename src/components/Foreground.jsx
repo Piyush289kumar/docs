@@ -30,10 +30,10 @@ function Foreground() {
             {
                 cardText: cardTextInput,
                 fileSize: fileSizeInput,
-                optionIcon: optionIconIsActive,
+                optionIcon: Boolean(optionIconIsActive),
                 footer: {
                     footerText: footerText,
-                    isActive: footerIsActive,
+                    isActive: Boolean(footerIsActive),
                     bgColor: footerBgColor,
                 },
             },
@@ -44,6 +44,8 @@ function Foreground() {
         setCardTextInput("");
         setfileSizeInput("");
     };
+
+    console.log(data);
 
 
     if (model) {
@@ -82,29 +84,25 @@ function Foreground() {
                             <select
                                 className="mb-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
                                 value={optionIconIsActive}
-                                onChange={(e) =>
-                                    optionIconIsActive && setoptionIconIsActive(e.target.value)
-                                }
+                                onChange={(e) => setoptionIconIsActive(e.target.value)}
                             >
-                                <option value="true" disabled={true} selected={true}>
-                                    Select Options
+                                <option value={true} disabled={true} selected={true}>
+                                    Select Download Options
                                 </option>
-                                <option value="true">Download Enable</option>
-                                <option value="true">Download Disable</option>
+                                <option value={true}>Download Enable</option>
+                                <option value={false}>Download Disable</option>
                             </select>
 
                             <select
                                 className="mb-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
                                 value={footerIsActive}
-                                onChange={(e) =>
-                                    footerIsActive && setfooterIsActive(e.target.value)
-                                }
+                                onChange={(e) => setfooterIsActive(e.target.value)}
                             >
                                 <option value="true" disabled={true} selected={true}>
                                     Select Footer Options
                                 </option>
-                                <option value="true">Footer Enable</option>
-                                <option value="true">Footer Disable</option>
+                                <option value={true}>Footer Enable</option>
+                                <option value={false}>Footer Disable</option>
                             </select>
 
                             <input
@@ -118,11 +116,9 @@ function Foreground() {
                             <select
                                 className="mb-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
                                 value={footerBgColor}
-                                onChange={(e) =>
-                                    footerBgColor && setfooterBgColor(e.target.value)
-                                }
+                                onChange={(e) => setfooterBgColor(e.target.value)}
                             >
-                                <option value="true" disabled={true} selected={true}>
+                                <option disabled={true} selected={true}>
                                     Select Footer Color Options
                                 </option>
                                 <option value="bg-blue-600">Blud</option>
