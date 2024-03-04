@@ -8,7 +8,7 @@ function Card({ data, reference }) {
 
 
   return (
-    <motion.div drag whileDrag={{ scale: 1 }}  dragTransition={{ bounceStiffness: 200, bounceDamping: 100 }} dragConstraints={reference} className='relative w-60 h-72 rounded-[30px] bg-zinc-900/90 p-5 overflow-hidden cursor-pointer'>
+    <motion.div drag whileDrag={{ scale: 1 }}  dragTransition={{ bounceStiffness: 200, bounceDamping: 100 }} dragConstraints={reference} className='relative w-60 h-72 rounded-[30px] bg-zinc-900/90 p-5 overflow-hidden cursor-pointer mx-5'>
       <div className='absolute'>
         <FaFileInvoice size="1rem" className='text-zinc-300' />
         <p className='font-semibold mt-5 text-zinc-400 text-md leading-none tracking-tight'>{data.cardText}</p>

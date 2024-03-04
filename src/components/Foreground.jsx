@@ -44,7 +44,7 @@ function Foreground() {
     return (
         <>
             <div className='fixed top-0 left-0 z-[3] w-full h-screen py-12 px-16'>
-                <div ref={ref} className='mt-11 w-full h-[80vh] flex flex-wrap gap-10'>
+                <div ref={ref} className='mt-11 w-full h-[80vh] flex flex-wrap'>
                     {
                         data.map((item, idx) => (
                             <Card data={item} key={idx} reference={ref} />
