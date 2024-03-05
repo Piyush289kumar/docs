@@ -23,6 +23,16 @@ function Foreground() {
                 bgColor: "bg-green-600",
             },
         },
+        {
+            cardText: "Word Dashboard Files.",
+            fileSize: "1.2mb",
+            optionIcon: true,
+            footer: {
+                footerText: "Upload Now",
+                isActive: true,
+                bgColor: "bg-blue-600",
+            },
+        },
     ]);
 
     const handleAddTask = (e) => {
